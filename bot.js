@@ -1,6 +1,8 @@
+require('dotenv').config();
 const Discord = require('discord.js');
 const ExcelJS = require('exceljs');
 const { GatewayIntentBits} = require('discord.js');
+const token = process.env.TOKEN_DISCORD
 
 const client = new Discord.Client({
     intents:[
@@ -63,4 +65,8 @@ function existeEmailRepetido(guild, email) {
   return false; // No existe ningún email repetido en el servidor
 }
 
-client.login('MTEzMDkzMDY0NjAxMzk2ODQ3NA.GiL7EX.65RyZqu9NQDGAF98jovkWgWFH867rnxg3Ej1KU'); // Reemplaza 'TOKEN_DE_TU_BOT' con el token de tu bot
+client.login(token); // Reemplaza 'TOKEN_DE_TU_BOT' con el token de tu bot
+
+
+
+//Dyno -->BOT para prohibir malas palabras, advertencia, banear. video -->https://www.youtube.com/watch?v=V76Bgsch6qM
